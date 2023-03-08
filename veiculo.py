@@ -40,6 +40,10 @@ def printVe(opcc):
         listaVe.sort(key=lambda x: x.ano, reverse=True)
         print(listaVe,'\n')
     elif opcc == 4:
-        listaVe.sort(key=lambda x: x.alu, reverse=True)
-        print(listaVe,'\n')
-printVe(4)
+        for num in listaVe:
+            if(num.alu==1):
+                print(num)
+
+def addVe(marcax,modelox,anox,alux):
+    vx = Veículo(marcax,modelox,anox,alux)
+    listaVe.append(vx)

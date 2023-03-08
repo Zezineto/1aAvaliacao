@@ -1,8 +1,9 @@
-from cliente import printCli, addCli, Cliente, Aluguel
-from veiculo import Veículo, Carro, printVe
+from cliente import printCli, addCli, percorrer, Cliente, Aluguel
+from veiculo import Veículo, Carro, printVe, addVe
 class App:
     pass
 
+idenx = 0
 def menu():
    print("Bem Vindo a Locadora")
    print("1-Alugar")
@@ -21,11 +22,15 @@ while opc != 7:
     elif opc == 2:
         print('opc 2')
     elif opc == 3:
-        nomex = str(input('Digite o nome do cliente: '))
-        idenx = int(input('Digite o id do cliente: '))
+        nomex = input('Digite o nome do cliente: ')
+        idenx+=1
         addCli(nomex,idenx)
     elif opc == 4:
-        print('opc 4')
+        marcax = input('Digite a marca do veículo: ')
+        modelox = input('Digite o modelo do veículo: ')
+        anox = int(input('Digite o ano do modelo: '))
+        alux = 1
+        addVe(marcax,modelox,anox,alux)
     elif opc == 5:
         print('Lista de Clientes:\n')
         printCli()
@@ -42,4 +47,4 @@ while opc != 7:
     opc = int(input('Digite a opção: '))
     
 print('Programa fechado.')
-#exit()
+exit()
