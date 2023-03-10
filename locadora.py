@@ -1,5 +1,7 @@
-from cliente import printCli, addCli, percorrer, Cliente, Aluguel, alugar, lista_alugueis, consulta_cliente
+from cliente import printCli, addCli, Cliente, Aluguel, alugar, lista_alugueis, consulta_cliente
 from veiculo import Veículo, Carro, printCar, addCar, print_carros_disponiveis
+import cliente
+import veiculo
 
 class App:
     pass
@@ -26,10 +28,13 @@ while opc != 7:
         cliente = consulta_cliente(id_cliente)
         dataini = input('Digite a data do aluguel: ')
         dataf = input('Digite a data de devolução: ')
-        aluguel = alugar(placa_para_aluguel,cliente,dataini,dataf)
-        lista_alugueis.append(aluguel)
+        aluguel_x = alugar(placa_para_aluguel,cliente,dataini,dataf)
+        lista_alugueis.append(aluguel_x)
     elif opc == 2:
-        print('opc 2')
+        print(cliente.lista_alugueis,'\n')
+        id_cliente = int(input('Digite o id do cliente que deseja devolver o carro: '))
+        aluguel = cliente.consulta_alugueis(id_cliente)
+        cliente.devolver(aluguel)
     elif opc == 3:
         nomex = input('Digite o nome do cliente: ')
         idenx+=1
