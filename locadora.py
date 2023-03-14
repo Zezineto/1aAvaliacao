@@ -2,6 +2,7 @@ from cliente import printCli, addCli, Cliente, Aluguel, alugar, lista_alugueis, 
 from veiculo import Veículo, Carro, printCar, addCar, print_carros_disponiveis
 import cliente
 import veiculo
+import datetime
 
 class App:
     pass
