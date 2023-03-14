@@ -14,7 +14,7 @@ class Carro:
 
         self.status = status
 
-    def aluguel (self, diax, mesx, anox): 
+    def aluguel (self, diax, mesx, anox):
         data1= datetime.date(day=diax, month=mesx, year=anox)  
         self.data_alugar = data1
       
